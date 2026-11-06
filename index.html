@@ -343,10 +343,9 @@ const calmo=matchMedia('(prefers-reduced-motion:reduce)').matches;
 document.querySelectorAll('[data-wa]').forEach(a=>{a.href=wa(a.dataset.wa);a.target='_blank';a.rel='noopener'});
 $('#ano').textContent=new Date().getFullYear();
 
-/* abertura: só uma vez por sessão */
-(()=>{const ab=$('#abre');let viu=false;try{viu=sessionStorage.getItem('abre')}catch(e){}
- if(viu||calmo){ab.remove();return}
- setTimeout(()=>{ab.classList.add('sai');try{sessionStorage.setItem('abre','1')}catch(e){}setTimeout(()=>ab.remove(),800)},2300)})();
+/* abertura a cada carregamento */
+(()=>{const ab=$('#abre');if(calmo){ab.remove();return}
+ setTimeout(()=>{ab.classList.add('sai');setTimeout(()=>ab.remove(),800)},2300)})();
 
 /* sintomas */
 const S=[
