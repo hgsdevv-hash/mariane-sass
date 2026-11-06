@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mariane Sass | Fisioterapia Pélvica e Pilates em Americana</title>
+<meta name="description" content="Fisioterapia pélvica, obstétrica e oncológica e pilates em Americana-SP com a Mariane Sass, especialista em Saúde da Mulher pelo Caism/Unicamp. Nota 5,0 no Google.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#3d1a4f">
+<link rel="icon" href="media/avatar.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..125,400..900;1,75..125,500..900&display=swap" rel="stylesheet">
+<style>
+:root{--roxo:#3d1a4f;--roxo2:#5a2a73;--teal:#0e7c74;--teal2:#14a093;--tinta:#17121c;--papel:#f6f4ef;--branco:#fff;--cinza:#5f5866;--linha:rgba(23,18,28,.14);--amarelo:#f2c230;--r:6px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:Archivo,system-ui,sans-serif;background:var(--papel);color:var(--tinta);font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+section{padding:clamp(64px,9vw,120px) 0}
+h1,h2,h3{line-height:1.02;font-stretch:88%;letter-spacing:-.015em}
+h2{font-size:clamp(34px,5.4vw,68px);font-weight:900;font-style:italic;margin-bottom:18px}
+.tag{display:inline-block;background:var(--teal);color:#fff;font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;padding:6px 10px;border-radius:3px;margin-bottom:18px}
+.lead{font-size:clamp(18px,1.7vw,21px);max-width:60ch;color:var(--cinza)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 24px;border-radius:var(--r);font-weight:800;text-decoration:none;transition:transform .2s cubic-bezier(.2,.8,.2,1),background .2s;text-align:center}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.98)}
+.btn-a{background:var(--amarelo);color:var(--tinta)}.btn-t{background:var(--teal);color:#fff}.btn-t:hover{background:#0a635d}
+.btn-o{border:2px solid currentColor}
+svg.wa{width:20px;height:20px;fill:currentColor;flex:none}
+
+/* abertura */
+#abre{position:fixed;inset:0;z-index:100;background:#fff;display:grid;place-items:center;transition:opacity .7s ease,visibility .7s}
+#abre.fim{opacity:0;visibility:hidden}
+#abre div{position:relative;width:min(70vw,420px);overflow:hidden}
+#abre img{width:100%;mix-blend-mode:multiply;clip-path:inset(0 100% 0 0);animation:rev 1.4s .15s cubic-bezier(.65,0,.2,1) forwards}
+#abre div::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 40%,rgba(255,255,255,.95) 50%,transparent 60%);transform:translateX(-110%);animation:bri 1s 1.45s ease forwards}
+@keyframes rev{to{clip-path:inset(0)}}@keyframes bri{to{transform:translateX(110%)}}
+
+/* topo */
+header{position:sticky;top:0;z-index:50;background:var(--roxo);color:#fff}
+.bar{display:flex;align-items:center;gap:22px;min-height:68px}
+.marca{min-width:0;display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-stretch:88%;font-size:19px;white-space:nowrap}
+.marca img{width:40px;height:40px;border-radius:50%;background:#fff}
+nav{display:flex;gap:20px;margin-left:auto;font-weight:600;font-size:15px}
+nav a{text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;padding:4px 0}nav a:hover{border-color:var(--amarelo)}
+.st{font-size:13px;font-weight:700;display:flex;gap:7px;align-items:center;white-space:nowrap}
+.st i{width:9px;height:9px;border-radius:50%;background:#aaa}.st.on i{background:#49e08d;box-shadow:0 0 0 0 rgba(73,224,141,.6);animation:pul 2s infinite}
+@keyframes pul{to{box-shadow:0 0 0 10px rgba(73,224,141,0)}}
+.bar .btn{min-height:42px;padding:8px 16px;font-size:15px}
+
+/* hero */
+.hero{background:var(--roxo);color:#fff;padding:clamp(36px,6vw,72px) 0 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(48px,min(8.4vw,14vh),116px);font-weight:900;font-style:italic;margin:6px 0 22px}
+.hero h1 em{color:var(--amarelo);font-style:inherit}
+.hero .lead{color:#e6dcec;margin-bottom:28px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:clamp(30px,5vw,64px)}
+.nums{display:flex;flex-wrap:wrap;gap:12px 34px;border-top:1px solid rgba(255,255,255,.25);padding:18px 0 clamp(28px,4vw,48px)}
+.nums b{display:block;font-size:30px;font-weight:900;font-stretch:88%;line-height:1.1}.nums span{font-size:14px;color:#d9cce1}
+.foto{position:relative;margin:0 14px 30px 0}
+.foto::before{content:"";position:absolute;inset:26px -14px -30px 26px;background:var(--teal)}
+.foto img{position:relative;width:100%;height:min(74vh,640px);min-height:380px;object-fit:cover;object-position:center 35%}
+.foto figcaption{position:absolute;left:-10px;bottom:34px;background:var(--amarelo);color:var(--tinta);font-weight:800;padding:8px 12px;font-size:14px;max-width:88%}
+
+/* faixa */
+.faixa{background:var(--amarelo);overflow:hidden;white-space:nowrap;font-weight:900;font-style:italic;font-stretch:88%;font-size:22px;padding:12px 0;position:relative}
+.faixa div{display:inline-block;animation:corre 34s linear infinite}
+.faixa:hover div{animation-play-state:paused}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* sintomas */
+.sint{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,4vw,48px);margin-top:36px;align-items:start}
+.lista{display:flex;flex-direction:column;border-top:2px solid var(--tinta)}
+.lista button{display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;padding:16px 8px;border-bottom:1px solid var(--linha);font-weight:700;font-size:clamp(17px,1.7vw,20px);transition:padding .2s,background .2s,color .2s}
+.lista button:hover{padding-left:16px}
+.lista button[aria-selected=true]{background:var(--roxo);color:#fff;padding-left:16px}
+.lista button span{font-size:13px;font-weight:700;opacity:.65;white-space:nowrap}
+.painel{background:var(--teal);color:#fff;padding:clamp(24px,3.4vw,44px);position:sticky;top:90px;min-height:400px;display:flex;flex-direction:column}
+.painel h3{font-size:clamp(28px,3.2vw,42px);font-weight:900;font-style:italic;margin-bottom:14px}
+.painel p{margin-bottom:16px}
+.painel ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:8px}
+.painel li{padding-left:22px;position:relative}.painel li::before{content:"";position:absolute;left:0;top:.55em;width:11px;height:11px;background:var(--amarelo)}
+.painel .btn{margin-top:auto;align-self:flex-start}
+.painel.troca>*{animation:sobe .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes sobe{from{opacity:0;transform:translateY(12px)}}
+.nota{font-size:14px;color:var(--cinza);margin-top:18px}
+
+/* gestacao */
+.gest{background:var(--tinta);color:#fff}
+.gest .lead{color:#c9c3cf}
+.semana{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:34px 0 6px}
+.semana b{font-size:clamp(72px,12vw,150px);font-weight:900;font-style:italic;font-stretch:85%;line-height:.95;color:var(--amarelo)}
+.semana span{font-size:clamp(20px,2.4vw,30px);font-weight:800}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:44px;background:none;cursor:grab;margin:6px 0}
+input[type=range]::-webkit-slider-runnable-track{height:10px;background:linear-gradient(90deg,var(--teal2) var(--p,30%),rgba(255,255,255,.2) var(--p,30%));border-radius:5px}
+input[type=range]::-moz-range-track{height:10px;background:rgba(255,255,255,.2);border-radius:5px}
+input[type=range]::-moz-range-progress{height:10px;background:var(--teal2);border-radius:5px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;margin-top:-12px;border-radius:50%;background:var(--amarelo);border:4px solid var(--tinta)}
+input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--amarelo);border:4px solid var(--tinta)}
+.tri{display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:#b5aeba}
+.fase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
+.fase div{border:1px solid rgba(255,255,255,.2);padding:20px;transition:background .25s,color .25s,border-color .25s}
+.fase div.on{background:#fff;color:var(--tinta);border-color:#fff}
+.fase h3{font-size:22px;font-weight:900;margin-bottom:8px}.fase p{font-size:16px}
+.fase small{display:block;font-weight:800;color:var(--teal2);margin-bottom:6px;font-size:13px}.fase .on small{color:var(--teal)}
+
+/* treino */
+.treino .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px);align-items:center}
+.circ{position:relative;aspect-ratio:1;max-width:440px;width:100%;margin-inline:auto;display:grid;place-items:center}
+.circ i{position:absolute;inset:0;border-radius:50%;background:var(--roxo);transform:scale(.62);transition:transform 1s cubic-bezier(.45,0,.3,1)}
+.circ.c i{transform:scale(.98)}
+.circ::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px dashed var(--linha)}
+.circ button{position:relative;color:#fff;font-weight:900;font-style:italic;font-stretch:88%;font-size:clamp(24px,3.4vw,36px);width:62%;aspect-ratio:1;border-radius:50%;line-height:1.05}
+.circ button small{display:block;font-size:15px;font-style:normal;font-weight:600;margin-top:6px}
+.cont{display:flex;gap:6px;margin:20px 0}.cont i{flex:1;height:8px;background:var(--linha);transition:background .3s}.cont i.ok{background:var(--teal)}
+
+/* tecnicas */
+.tec{background:var(--branco)}
+.tec .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,70px);align-items:start}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0}
+.chips button{border:2px solid var(--tinta);padding:9px 14px;font-weight:700;border-radius:3px;transition:background .2s,color .2s}
+.chips button:hover{background:#ece8e0}.chips button[aria-pressed=true]{background:var(--tinta);color:#fff}
+#tecTxt{min-height:84px;font-size:19px}
+.jornal{position:relative;margin:0 14px 18px 0}
+.jornal::before{content:"";position:absolute;inset:18px -14px -18px 18px;background:var(--roxo)}
+.jornal img{position:relative;width:100%;border:1px solid var(--linha)}
+.jornal figcaption{position:relative;font-size:14px;color:#fff;padding:26px 6px 0 24px}
+.cita{font-size:clamp(23px,2.6vw,32px);font-weight:800;font-style:italic;font-stretch:90%;line-height:1.15;border-left:8px solid var(--amarelo);padding-left:18px}
+
+/* avaliacoes */
+.ava{background:var(--roxo);color:#fff;overflow:hidden}
+.ava-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:end}
+.nota5{display:flex;align-items:center;gap:14px}.nota5 b{font-size:clamp(60px,8vw,96px);font-weight:900;font-style:italic;line-height:1}.nota5 span{color:var(--amarelo);font-size:22px;letter-spacing:2px}.nota5 small{display:block;color:#e6dcec;font-size:15px;letter-spacing:0}
+.setas button{width:52px;height:52px;background:#fff;color:var(--tinta);font-size:22px;font-weight:900;border-radius:var(--r);margin-left:6px}.setas button:hover{background:var(--amarelo)}
+.trilho{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:34px max(20px,calc((100vw - 1200px)/2)) 12px;scrollbar-width:none;cursor:grab}
+.trilho::-webkit-scrollbar{display:none}.trilho.pega{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.trilho article{flex:0 0 min(84vw,400px);scroll-snap-align:center;background:#fff;color:var(--tinta);padding:28px;display:flex;flex-direction:column;gap:16px;min-height:270px}
+.trilho article p{font-size:19px;line-height:1.4;font-weight:500}
+.trilho article footer{margin-top:auto;font-weight:800}.trilho article footer span{display:block;font-weight:500;font-size:14px;color:var(--cinza)}
+.est{color:#c8930a;letter-spacing:2px}
+
+/* espaco */
+.grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:34px}
+.grade figure{position:relative;overflow:hidden;aspect-ratio:4/5;background:#ddd}
+.grade img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.grade figure:hover img{transform:scale(1.05)}
+.grade figcaption{position:absolute;left:0;bottom:16px;background:var(--teal);color:#fff;font-weight:800;font-size:15px;padding:7px 12px}
+
+/* duvidas */
+.duv{background:var(--branco)}
+details{border-bottom:1px solid var(--linha)}details:first-of-type{border-top:2px solid var(--tinta);margin-top:30px}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:18px;padding:20px 4px;font-weight:800;font-size:clamp(18px,2vw,23px)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:30px;line-height:.9;color:var(--teal);font-weight:500;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 4px 22px;max-width:70ch;color:var(--cinza)}
+
+/* contato */
+.cont-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:34px}
+.cx{background:#fff;padding:26px;border-top:8px solid var(--teal)}
+.cx h3{font-size:25px;font-weight:900;margin-bottom:12px}
+.hor{list-style:none;padding:0;display:grid;gap:3px}.hor li{display:flex;justify-content:space-between;gap:10px;padding:4px 8px}.hor li.hoje{background:var(--amarelo);font-weight:800}
+.fim{background:var(--teal);color:#fff;text-align:left}
+.fim h2{font-size:clamp(44px,8.4vw,112px);max-width:12ch}
+.fim p{font-size:20px;max-width:46ch;margin-bottom:26px}
+footer.pe{background:var(--tinta);color:#c9c3cf;padding:28px 0;font-size:14px}
+footer.pe .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer.pe a{color:#fff}
+.flut{position:fixed;right:16px;bottom:16px;z-index:40;width:58px;height:58px;border-radius:50%;background:#1faa59;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .2s}
+.flut:hover{transform:scale(1.07)}.flut svg{width:28px;height:28px;fill:#fff}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1)}.rv.vi{opacity:1;transform:none}
+
+@media(max-width:1240px){.st{display:none}}
+@media(max-width:1080px){nav{display:none}.bar{justify-content:space-between}}
+@media(max-width:980px){
+.hero .wrap,.sint,.treino .wrap,.tec .wrap{grid-template-columns:minmax(0,1fr)}.painel{position:static;min-height:0}.foto{max-width:520px}.foto img{height:auto;aspect-ratio:4/5;min-height:0}
+.fase,.cont-g{grid-template-columns:minmax(0,1fr)}.fase div:not(.on){display:none}}
+@media(max-width:600px){.grade{grid-template-columns:minmax(0,1fr)}.acoes .btn{width:100%}.marca span{font-size:17px}}
+@media(max-width:380px){.bar .btn{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}.faixa div{animation:none}}
+</style>
+</head>
+<body>
+<div id="abre" aria-hidden="true"><div><img src="media/logo.webp" alt=""></div></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></symbol></svg>
+
+<header><div class="wrap bar">
+  <a class="marca" href="#topo"><img src="media/avatar.webp" alt="" width="40" height="40"><span>Studio Mariane Sass</span></a>
+  <nav aria-label="Principal"><a href="#sintomas">O que você sente</a><a href="#gestacao">Gestação</a><a href="#treino">Treino guiado</a><a href="#avaliacoes">Avaliações</a><a href="#contato">Contato</a></nav>
+  <span class="st" id="st"><i></i><span id="stT">Seg a sex, 8h às 18h</span></span>
+  <a class="btn btn-a" data-wa="Olá, Mariane! Vim pelo site e gostaria de agendar uma avaliação." href="#"><svg class="wa"><use href="#wa"/></svg>Agendar</a>
+</div></header>
+
+<main id="topo">
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="tag">Fisioterapia pélvica em Americana</span>
+    <h1>Sinta prazer em se <em>cuidar.</em></h1>
+    <p class="lead">Escape de xixi, dor na relação e desconforto na gestação são comuns, mas não precisam ser o seu normal. Fisioterapia pélvica, obstétrica, oncológica e pilates, com atendimento individual.</p>
+    <div class="acoes">
+      <a class="btn btn-a" data-wa="Olá, Mariane! Vim pelo site e gostaria de agendar uma avaliação." href="#"><svg class="wa"><use href="#wa"/></svg>Agendar avaliação</a>
+      <a class="btn btn-o" href="#sintomas">O que você está sentindo?</a>
+    </div>
+    <div class="nums">
+      <div><b>5,0 ★</b><span>24 avaliações no Google</span></div>
+      <div><b>Caism/Unicamp</b><span>especialização em Saúde da Mulher</span></div>
+    </div>
+  </div>
+  <figure class="foto"><img src="media/studio.webp" alt="Mariane Sass no estúdio de pilates, entre aparelhos e bolas" width="1100" height="1270"><figcaption>Mariane Sass, fisioterapeuta</figcaption></figure>
+</div></section>
+<div class="faixa" aria-hidden="true"><div>PÉLVICA ✦ OBSTÉTRICA ✦ ONCOLÓGICA ✦ PILATES ✦ LIPEDEMA ✦ PÓS-PARTO ✦ SAÚDE DO HOMEM ✦ PÉLVICA ✦ OBSTÉTRICA ✦ ONCOLÓGICA ✦ PILATES ✦ LIPEDEMA ✦ PÓS-PARTO ✦ SAÚDE DO HOMEM ✦ PÉLVICA ✦ OBSTÉTRICA ✦ ONCOLÓGICA ✦ PILATES ✦ LIPEDEMA ✦ PÓS-PARTO ✦ SAÚDE DO HOMEM ✦&nbsp;</div></div>
+
+<section id="sintomas"><div class="wrap">
+  <span class="tag">Sem vergonha</span>
+  <h2 class="rv">O que você está sentindo?</h2>
+  <p class="lead rv">Toque na opção mais parecida com o que acontece com você. A conversa no WhatsApp já começa com o assunto, sem precisar explicar tudo.</p>
+  <div class="sint">
+    <div class="lista" role="tablist" aria-label="Sintomas" id="lista"></div>
+    <div class="painel" id="painel" role="tabpanel" aria-live="polite"></div>
+  </div>
+  <p class="nota">Conteúdo informativo. Só a avaliação individual define o diagnóstico fisioterapêutico e o tratamento.</p>
+</div></section>
+
+<section class="gest" id="gestacao"><div class="wrap">
+  <span class="tag">Gestantes</span>
+  <h2 class="rv">Em que semana você está?</h2>
+  <p class="lead rv">Arraste. A fisioterapia pélvica é indicada na gestação qualquer que seja a via de parto, inclusive na cesárea, e quanto antes começar, melhor.</p>
+  <div class="semana"><b id="sN">12</b><span id="sT">semanas</span></div>
+  <label for="sem" style="position:absolute;left:-9999px">Semana de gestação</label>
+  <input id="sem" type="range" min="1" max="40" value="12">
+  <div class="tri"><span>1ª semana</span><span>40ª semana</span></div>
+  <div class="fase" id="fases">
+    <div><small>1 a 13 semanas</small><h3>1º trimestre</h3><p>Muitas mudanças e muitas dúvidas. Hora de conhecer o assoalho pélvico e começar a prevenção.</p></div>
+    <div><small>14 a 27 semanas</small><h3>2º trimestre</h3><p>Costuma ser a fase mais tranquila. Boa para fortalecer, trabalhar a postura e treinar a respiração.</p></div>
+    <div><small>28 a 40 semanas</small><h3>3º trimestre</h3><p>A reta final. Cuidado com dores nas costas e na pelve, e preparo do corpo para o parto.</p></div>
+  </div>
+  <p style="margin-top:26px"><a class="btn btn-a" id="gWa" href="#"><svg class="wa"><use href="#wa"/></svg>Quero começar</a></p>
+</div></section>
+
+<section class="treino" id="treino"><div class="wrap">
+  <div>
+    <span class="tag">Experimente agora</span>
+    <h2 class="rv">Você treina todos os músculos. E os que não vê?</h2>
+    <p class="lead">Um minuto para sentir o assoalho pélvico: contraia como se segurasse o xixi, sem prender a respiração, e solte por completo. Solte é tão importante quanto contrair.</p>
+    <div class="cont" id="cont" aria-hidden="true"></div>
+    <p class="nota">Só para percepção do corpo, não é prescrição. Se sentir dor, pare. Se está gestante ou operou há pouco, fale com a Mari antes.</p>
+  </div>
+  <div class="circ" id="circ"><i></i><button id="circB" type="button"><span id="circT">Começar</span><small id="circS">5 repetições</small></button></div>
+</div></section>
+
+<section class="tec"><div class="wrap">
+  <div>
+    <span class="tag">Tratamento</span>
+    <h2 class="rv">Cada recurso, uma explicação simples.</h2>
+    <div class="chips" id="chips"></div>
+    <p id="tecTxt" aria-live="polite"></p>
+    <p class="cita" style="margin-top:30px">“Ela transforma o pós-operatório em uma fase ativa de recuperação.”</p>
+    <p class="nota">Mariane Sass, em entrevista sobre fisioterapia pélvica masculina.</p>
+  </div>
+  <figure class="jornal"><img src="media/jornal.webp" alt="Página de jornal com entrevista de Mariane Sass sobre fisioterapia pélvica após cirurgias" width="640" height="931" loading="lazy"><figcaption>Coluna Maurício Godoy, 8 de novembro de 2025</figcaption></figure>
+</div></section>
+
+<section class="ava" id="avaliacoes">
+  <div class="wrap ava-top">
+    <div><span class="tag">Quem já passou por aqui</span><h2 class="rv" style="margin:0">Avaliações no Google</h2></div>
+    <div class="nota5"><b>5,0</b><span>★★★★★<small>24 avaliações</small></span></div>
+    <div class="setas"><button type="button" id="ant" aria-label="Avaliação anterior">←</button><button type="button" id="prox" aria-label="Próxima avaliação">→</button></div>
+  </div>
+  <div class="trilho" id="trilho" tabindex="0" aria-label="Avaliações, arraste para ver mais">
+    <article><div class="est">★★★★★</div><p>“A Mari é uma profissional incrível e atenciosa. Me ajudou muito com meu problema e foi paciente em cada percurso do caminho.”</p><footer>Karoline<span>Avaliação no Google</span></footer></article>
+    <article><div class="est">★★★★★</div><p>“Excelente tratamento de fisioterapia do assoalho pélvico, mesmo sendo pelo convênio médico. Profissional respeitosa, atenciosa e boa ouvinte.”</p><footer>Eduardo<span>Avaliação no Google</span></footer></article>
+    <article><div class="est">★★★★★</div><p>“Fiz várias sessões de fisioterapia na minha vida, mas com essa profissional foi a melhor que fiz.”</p><footer>Vera<span>Avaliação no Google</span></footer></article>
+    <article><div class="est">★★★★★</div><p>“Uma profissional excelente, super comprometida com seus pacientes além de ser super humana e acolhedora.”</p><footer>Cristina<span>Avaliação no Google</span></footer></article>
+    <article><div class="est">★★★★★</div><p>“Iniciei as seções com muitas dores no joelho e agora estou bem melhor! Eu recomendo!”</p><footer>Ivaneide<span>Avaliação no Google</span></footer></article>
+    <article><div class="est">★★★★★</div><p>“Procurei para sessões de fisioterapia em razão de uma fratura no pé e ela me acolheu muito bem.”</p><footer>Samantha<span>Avaliação no Google</span></footer></article>
+  </div>
+</section>
+
+<section id="espaco"><div class="wrap">
+  <span class="tag">O espaço</span>
+  <h2 class="rv">Equipado, reservado e sem pressa.</h2>
+  <div class="grade">
+    <figure><img src="media/cones.webp" alt="Mariane segurando cones vaginais usados no fortalecimento pélvico" loading="lazy" width="1100" height="1375" style="object-position:center bottom"><figcaption>Fortalecimento pélvico</figcaption></figure>
+    <figure><img src="media/gestante.webp" alt="Mariane ao lado de uma gestante no consultório" loading="lazy" width="1100" height="1375"><figcaption>Acompanhamento na gestação</figcaption></figure>
+    <figure><img src="media/pilates.webp" alt="Mariane orientando exercício em aparelho de pilates" loading="lazy" width="640" height="356"><figcaption>Pilates com fisioterapeuta</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="duv"><div class="wrap">
+  <span class="tag">Dúvidas comuns</span>
+  <h2 class="rv">Pode perguntar.</h2>
+  <details open><summary>Escape de xixi é normal depois dos filhos ou com a idade?</summary><p>É comum, mas não é normal. Muita gente convive com isso achando que não tem jeito, e a incontinência urinária tem tratamento.</p></details>
+  <details><summary>Vou fazer cesárea. Mesmo assim preciso?</summary><p>Sim. A fisioterapia pélvica é indicada na gestação independentemente da via de parto.</p></details>
+  <details><summary>Quando começar na gravidez?</summary><p>O mais breve possível. Quanto antes começar, mais benefícios você tem na gestação e no pós-parto.</p></details>
+  <details><summary>Homem também faz fisioterapia pélvica?</summary><p>Sim, principalmente após cirurgias urológicas, como a retirada da próstata. O trabalho ajuda no controle urinário e na função sexual, em atendimento confidencial.</p></details>
+  <details><summary>É o mesmo que pompoarismo?</summary><p>Não. A fisioterapia pélvica é um tratamento de saúde, com avaliação individual e objetivo terapêutico.</p></details>
+  <details><summary>Atende por convênio?</summary><p>Já divulgou atendimento por São Lucas Saúde e Sepaco. Consulte pelo WhatsApp se o seu plano é aceito hoje.</p></details>
+</div></section>
+
+<section id="contato"><div class="wrap">
+  <span class="tag">Onde estamos</span>
+  <h2 class="rv">Venha conhecer.</h2>
+  <div class="cont-g">
+    <div class="cx"><h3>Endereço</h3><p>R. Argentina, 678<br>Chácara Girassol, Americana-SP<br>13465-690</p><p style="margin-top:14px"><a href="https://www.google.com/maps/search/?api=1&query=Dra.+Mariane+Sass+Fisioterapia+P%C3%A9lvica+%26+Pilates+Americana" target="_blank" rel="noopener">Abrir no mapa ↗</a></p></div>
+    <div class="cx"><h3>Horários</h3><ul class="hor" id="hor"></ul></div>
+    <div class="cx"><h3>Contato</h3><p>WhatsApp<br><a data-wa="Olá, Mariane! Vim pelo site." href="#"><b>(19) 99468-6045</b></a></p><p style="margin-top:14px">Instagram<br><a href="https://www.instagram.com/fisiopelvica_marisass/" target="_blank" rel="noopener"><b>@fisiopelvica_marisass</b></a></p></div>
+  </div>
+</div></section>
+
+<section class="fim"><div class="wrap">
+  <h2>O primeiro passo é uma conversa.</h2>
+  <p>Conte o que está acontecendo, no seu tempo. A Mari responde e combina a avaliação com você.</p>
+  <a class="btn btn-a" data-wa="Olá, Mariane! Vim pelo site e gostaria de agendar uma avaliação." href="#"><svg class="wa"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+</div></section>
+</main>
+
+<footer class="pe"><div class="wrap"><span>© <span id="ano"></span> Studio Mariane Sass, Fisioterapia Pélvica e Pilates</span><span>Site por <a href="https://www.hgsdev.com.br" target="_blank" rel="noopener">HGS Dev</a></span></div></footer>
+<a class="flut" data-wa="Olá, Mariane! Vim pelo site." href="#" aria-label="Chamar no WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+const FONE='5519994686045',$=s=>document.querySelector(s),wa=m=>`https://wa.me/${FONE}?text=${encodeURIComponent(m)}`;
+const calmo=matchMedia('(prefers-reduced-motion:reduce)').matches;
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href=wa(a.dataset.wa);a.target='_blank';a.rel='noopener'});
+$('#ano').textContent=new Date().getFullYear();
+
+/* abertura: só uma vez por sessão */
+(()=>{const ab=$('#abre');let viu=false;try{viu=sessionStorage.getItem('abre')}catch(e){}
+ if(viu||calmo){ab.remove();return}
+ setTimeout(()=>{ab.classList.add('fim');try{sessionStorage.setItem('abre','1')}catch(e){}setTimeout(()=>ab.remove(),800)},2300)})();
+
+/* sintomas */
+const S=[
+{t:'Escape de xixi',g:'tosse, riso, exercício',h:'Escapes têm tratamento.',p:'Perder urina ao tossir, rir ou treinar é comum, mas não precisa fazer parte da sua rotina.',l:['Avaliação do assoalho pélvico','Fortalecimento e reeducação muscular','Orientações para o dia a dia'],m:'tenho escapes de urina'},
+{t:'Urgência para ir ao banheiro',g:'bexiga hiperativa',h:'Corre para o banheiro?',p:'Vontade urgente mesmo com a bexiga vazia e acordar várias vezes à noite são sinais de bexiga hiperativa.',l:['Reeducação vesical','Treino da musculatura pélvica','Acompanhamento da evolução'],m:'sinto urgência para urinar'},
+{t:'Dor na relação',g:'desconforto íntimo',h:'Sexo não deveria doer.',p:'Dor e desconforto na relação merecem atenção. O atendimento é individual, reservado e respeita o seu tempo.',l:['Avaliação cuidadosa','Relaxamento e consciência corporal','Recursos para a musculatura pélvica'],m:'sinto dor na relação'},
+{t:'Estou grávida',g:'pré-natal fisioterapêutico',h:'Prepare o corpo para o parto.',p:'Indicada na gestação qualquer que seja a via de parto, ajuda com dores, respiração e preparo do assoalho pélvico.',l:['Respiração e postura','Prevenção de laceração perineal','Pilates para gestantes'],m:'estou grávida e quero fazer o acompanhamento'},
+{t:'Pós-parto',g:'recuperação e cicatriz',h:'Depois do parto, cuide de você.',p:'Recupere a musculatura e trate o desconforto da cicatriz de cesárea ou períneo, com orientação também na amamentação.',l:['Reabilitação do assoalho pélvico','Laserterapia na cicatriz','Orientações sobre amamentação'],m:'estou no pós-parto'},
+{t:'Dor lombar ou no quadril',g:'coluna, ombro, pescoço',h:'A dor está tentando dizer algo.',p:'Nem toda dor tem a mesma origem. Identificar a causa é o primeiro passo de um tratamento eficaz.',l:['Avaliação da origem da dor','Fisioterapia individual','Pilates para fortalecer'],m:'tenho dor na lombar, no quadril ou na coluna'},
+{t:'Pós-cirurgia de mama',g:'fisioterapia oncológica',h:'Seu corpo passou por uma batalha.',p:'Dor e limitação de movimento depois da cirurgia do câncer de mama não devem ser ignoradas.',l:['Recuperação do movimento','Controle da dor','Cuidado com o inchaço'],m:'fiz cirurgia de mama'},
+{t:'Lipedema ou inchaço',g:'lipedema e linfedema',h:'Lipedema vai além de um procedimento.',p:'O controle dos sintomas vem da combinação de vários cuidados. Lipedema e linfedema são diferentes, e a avaliação esclarece.',l:['Avaliação individual','Tratamento conservador','Exercício orientado'],m:'tenho lipedema ou inchaço nas pernas'},
+{t:'Sou homem, operei a próstata',g:'saúde do homem',h:'Sem vergonha, sem tabu.',p:'Depois de cirurgias urológicas, a fisioterapia ajuda no controle urinário e na função sexual, em atendimento confidencial.',l:['Exercícios de Kegel orientados','Eletroestimulação e biofeedback','Reeducação vesical'],m:'fiz cirurgia da próstata'},
+{t:'Quero fazer pilates',g:'com fisioterapeuta',h:'Pilates é saúde.',p:'Força, flexibilidade e mobilidade com acompanhamento de quem conhece o corpo, inclusive para gestantes.',l:['Tonificação muscular','Alívio do estresse','Mais mobilidade nas articulações'],m:'quero fazer pilates'}];
+const lista=$('#lista'),pn=$('#painel');
+function mostra(i,foco){[...lista.children].forEach((b,j)=>{b.setAttribute('aria-selected',j===i);b.tabIndex=j===i?0:-1});const s=S[i];
+ pn.classList.remove('troca');void pn.offsetWidth;pn.classList.add('troca');
+ pn.innerHTML=`<h3>${s.h}</h3><p>${s.p}</p><ul>${s.l.map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn btn-a" target="_blank" rel="noopener" href="${wa(`Olá, Mariane! Vim pelo site: ${s.m}. Gostaria de marcar uma avaliação.`)}"><svg class="wa"><use href="#wa"/></svg>Falar sobre isso</a>`;
+ if(foco)lista.children[i].focus()}
+S.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.role='tab';b.innerHTML=`${s.t}<span>${s.g}</span>`;b.onclick=()=>{mostra(i);if(innerWidth<=980)pn.scrollIntoView({behavior:calmo?'auto':'smooth',block:'nearest'})};lista.append(b)});
+lista.addEventListener('keydown',e=>{const i=[...lista.children].indexOf(document.activeElement);if(e.key==='ArrowDown'){e.preventDefault();mostra((i+1)%S.length,1)}if(e.key==='ArrowUp'){e.preventDefault();mostra((i-1+S.length)%S.length,1)}});
+mostra(0);
+
+/* gestacao */
+const sem=$('#sem'),fs=[...$('#fases').children];
+function g(){const v=+sem.value;$('#sN').textContent=v;$('#sT').textContent=v===1?'semana':'semanas';sem.style.setProperty('--p',((v-1)/39*100)+'%');const t=v<=13?0:v<=27?1:2;fs.forEach((f,i)=>f.classList.toggle('on',i===t));$('#gWa').href=wa(`Olá, Mariane! Estou com ${v} ${v===1?'semana':'semanas'} de gestação e quero começar o acompanhamento.`);$('#gWa').target='_blank';$('#gWa').rel='noopener'}
+sem.oninput=g;g();
+
+/* treino guiado */
+const cc=$('#circ'),cT=$('#circT'),cS=$('#circS'),ct=$('#cont'),REP=5;for(let i=0;i<REP;i++)ct.append(document.createElement('i'));
+let rod=false,tid=[];const pare=()=>{tid.forEach(clearTimeout);tid=[];rod=false;cc.classList.remove('c');cT.textContent='Começar';cS.textContent=REP+' repetições';[...ct.children].forEach(i=>i.classList.remove('ok'))};
+const at=(f,ms)=>tid.push(setTimeout(f,ms));
+$('#circB').onclick=()=>{if(rod)return pare();rod=true;const tc=5000,tr=5000;
+ for(let r=0;r<REP;r++){const b=r*(tc+tr);
+  for(let s=0;s<5;s++){at(()=>{cc.classList.add('c');cT.textContent='Contraia';cS.textContent=(5-s)+'s · toque para parar'},b+s*1000);at(()=>{cc.classList.remove('c');cT.textContent='Solte';cS.textContent=(5-s)+'s · toque para parar'},b+tc+s*1000)}
+  at(()=>ct.children[r].classList.add('ok'),b+tc+tr-100)}
+ at(()=>{rod=false;cT.textContent='Muito bem!';cS.textContent='Fazer de novo'},REP*(tc+tr))};
+
+/* tecnicas */
+const T=[['Kegel','Exercícios de contrair e relaxar a musculatura pélvica, ajustados ao que a avaliação mostrar.'],['Biofeedback','Mostra a contração em tempo real, para você aprender a usar o músculo certo.'],['Eletroestimulação','Estímulos elétricos suaves que ajudam a ativar a musculatura e a controlar sintomas.'],['Cones vaginais','Pequenas cápsulas com pesos diferentes, usadas para fortalecer de forma progressiva.'],['Educador perineal','Acessório que dá retorno visual: ensina a contrair e relaxar os músculos do assoalho pélvico.'],['Reeducação vesical','Treino de hábitos e horários para retomar o controle da bexiga.'],['Laserterapia','Recurso usado no cuidado com cicatrizes, como a da cesárea.'],['Vacuoterapia e ondas de choque','Recursos que estimulam o fluxo sanguíneo e a função muscular.']];
+const ch=$('#chips');T.forEach((t,i)=>{const b=document.createElement('button');b.type='button';b.textContent=t[0];b.onclick=()=>sel(i);ch.append(b)});
+function sel(i){[...ch.children].forEach((b,j)=>b.setAttribute('aria-pressed',i===j));$('#tecTxt').textContent=T[i][1]}sel(0);
+
+/* carrossel com arraste */
+const tr=$('#trilho');let dn=false,sx=0,sl=0;
+tr.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;dn=true;sx=e.clientX;sl=tr.scrollLeft;tr.classList.add('pega')});
+addEventListener('pointermove',e=>{if(dn)tr.scrollLeft=sl-(e.clientX-sx)});
+addEventListener('pointerup',()=>{dn=false;tr.classList.remove('pega')});
+const passo=d=>tr.scrollBy({left:d*(tr.firstElementChild.offsetWidth+16),behavior:calmo?'auto':'smooth'});
+$('#ant').onclick=()=>passo(-1);$('#prox').onclick=()=>passo(1);
+
+/* horarios e status, no fuso de Americana */
+const DIAS=['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],agora=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Sao_Paulo'})),d=agora.getDay(),h=agora.getHours();
+$('#hor').innerHTML=[1,2,3,4,5,6,0].map(i=>`<li class="${i===d?'hoje':''}"><span>${DIAS[i]}</span><span>${i>=1&&i<=5?'8h às 18h':'Fechado'}</span></li>`).join('');
+if(d>=1&&d<=5&&h>=8&&h<18){$('#st').classList.add('on');$('#stT').textContent='Aberto agora, até 18h'}
+
+/* entrada ao rolar */
+if('IntersectionObserver'in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vi');io.unobserve(e.target)}}),{threshold:.15});document.querySelectorAll('.rv').forEach(x=>io.observe(x))}else document.querySelectorAll('.rv').forEach(x=>x.classList.add('vi'));
+</script>
+</body>
+</html>
