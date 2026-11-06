@@ -9,3 +9,5 @@ Site de Mariane Sass (@fisiopelvica_marisass), fisioterapia pélvica e pilates e
 - Autorização da pessoa na foto `media/gestante.webp` e das avaliações citadas.
 - Lista de recursos: a maioria vem da entrevista de 08/11/2025 e dos posts; confirmar a redação clínica.
 - Tirar o `noindex` do `index.html` quando ela aprovar o site.
+- Confirmar se a pessoa da foto `media/studio.webp` é a própria Mariane (a foto veio de um post dela, sem legenda identificando).
+- Pedir o PDF ou uma foto boa da matéria do Jornal de Nova Odessa: o Instagram só tem um vídeo de 698px, por isso a publicação foi recriada como card com texto.
